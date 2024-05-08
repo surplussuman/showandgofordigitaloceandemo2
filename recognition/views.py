@@ -1009,7 +1009,7 @@ def mark_your_attendance(request):
 
 
                 # Perform recognition
-                (pred, prob) = predict(rgb_frame, svc)
+                (pred, prob) = predict(rgb_frame, svc) # here to change the frame for predictions
 
                 if pred != [-1]:
                     person_name = encoder.inverse_transform(np.ravel([pred]))[0]
