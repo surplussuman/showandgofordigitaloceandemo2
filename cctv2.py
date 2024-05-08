@@ -364,6 +364,7 @@ def detect_faces_and_display():
             break
 
 
+
 # Start the threads
 read_thread = threading.Thread(target=read_frames)
 detect_thread = threading.Thread(target=detect_faces_and_display)
