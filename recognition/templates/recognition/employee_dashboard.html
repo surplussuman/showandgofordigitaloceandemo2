@@ -1,0 +1,935 @@
+{% load static %}
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+
+	  <!-- Required meta tags 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+   <style>
+    body{
+      background: url('{% static "recognition/img/employee.jpg"%}') no-repeat center center fixed;
+      background-size: cover;
+      
+    }
+   
+   </style>
+
+
+	
+</head>
+<body>
+   <div class="col-lg-12" style="background: rgba(0,0,0,0.6);margin-top:3em;margin-bottom:5em;padding-top:1em;padding-bottom:3em;color:#fff;border-radius:10px;-webkit-box-shadow: 2px 2px 15px 0px rgba(0, 3, 0, 0.7);
+-moz-box-shadow:    2px 2px 15px 0px rgba(0, 3, 0, 0.7);
+box-shadow:         2px 2px 15px 0px rgba(0, 3, 0, 0.7);">
+   <!-- <div class="col-sm-12">
+       <a href="{% url 'logout' %}"><h5 class="text-right"><i class="fa fa-user-circle" aria-hidden="true"></i> Logout</h5></a>
+    </div>
+
+    <div class="col-sm-12">
+      <a href="{% url 'logout' %}"> <h5 class="text-right"><button class="bn30" ><b>Logout</b></button></h5></a>
+    </div>
+     <div class="row">
+                <div class="col-md-12 text-center">
+                    
+                        <h3 class="animate-charcter" style="margin-bottom:4em"><b>Welcome {{user.username}} </b></h3>
+        
+                </div>
+      </div> 
+     
+     
+      <style>
+.bn30 {
+  border: 5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 20px;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+  padding: 0.7em 2em;
+  border-radius: 65px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+  -webkit-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  color: white;
+}
+
+.bn30 .text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+}
+
+.bn30:after {
+  content: "";
+  border-radius: 18px;
+  position: absolute;
+  margin: 4px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: #0e0e10;
+}
+
+.bn30:hover {
+  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+  box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+}
+
+.bn30:hover .text {
+  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+}
+
+
+.animate-charcter {
+                text-transform: uppercase;
+                background-image: linear-gradient(-225deg,
+                        #231557 0%,
+                        #f6f4f8 29%,
+                        #ff1361 67%,
+                        #fff800 100%);
+                background-size: auto auto;
+                background-clip: border-box;
+                background-size: 200% auto;
+                color: #fff;
+                background-clip: text;
+                text-fill-color: transparent;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: textclip 2s linear infinite;
+                display: inline-block;
+                font-size: 50px;
+            }
+
+            @keyframes textclip {
+                to {
+                    background-position: 200% center;
+                }
+            }
+
+
+
+      h4{
+        margin-bottom: 1.5em;
+        padding-top: 30px;
+
+      }
+      img{
+        border-radius:50%;
+        -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+     transition: all 0.3s ease-in-out;
+      }
+      img:hover{
+        -webkit-box-shadow: 2px 2px 21px 0px rgba(0, 3, 0, 0.91);
+        -moz-box-shadow:    2px 2px 21px 0px rgba(0, 3, 0, 0.91);
+        box-shadow:         2px 2px 21px 0px rgba(0, 3, 0, 0.91);
+        border:2px solid #fff;
+      }
+      h3{
+        margin-bottom: 1.3em;
+      }
+      a{
+        color:inherit
+      }
+      a:hover{
+        color:inherit;
+        text-decoration: none;
+      }
+      /*
+      .section-title:after {
+          content:' ';display:block;margin:0 auto;width:100px;margin-top: 6px;border:2px solid #d0d0d0;border-radius:4px;
+          -webkit-border-radius:4px;
+          -moz-border-radius:4px;
+          box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+          -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+          -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+          margin-bottom:1em;
+        }
+        */
+     
+    </style>
+
+
+
+
+
+      <div class="row">
+     
+       
+
+          
+          
+       
+          
+            
+        
+        <div class="col-md-12" style="padding-left: 900px; margin-left: auto; margin-right: auto;">
+          <a href="{%url 'view-my-attendance-employee-login' %}"><img src="{% static 'recognition/img/reports.png' %}" class="img-responsive" style="width:300px;height:300px"/></a>
+       
+        </div>
+       
+
+
+
+
+      </div>
+  <div class="row">
+
+  
+
+        <div class="col md-6" style="padding-left: 945px;">
+             <h4 >View My Attendance</h4>
+        </div>
+     
+
+
+</div>
+
+ {% if messages %}
+      {% for message in messages%}
+      <div class="alert alert-{{message.tags}}" > {{message}}
+      </div>
+      {%endfor %}
+
+    {%endif%}
+
+
+</div>
+
+
+
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{user.username}} Dashboard </title>
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="user.css">    
+
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu-toggle">
+    <div class="overlay">
+        <label for="menu-toggle">
+        </label>
+    </div>
+
+    <div class="sidebar">
+        <div class="sidebar-container">
+            <div class="brand">
+                <h2>
+                    <a href="https://sirusxai.com/" target="_blank"> <span class="lab la-staylinked"></span>
+                        SirusX AI</a>
+                </h2>
+            </div>
+            <div class="sidebar-avartar">
+                <div>
+                    <img src="img/avtar.svg" alt="avatar">
+                </div>
+                <div class="avartar-info">
+                    <div class="avartar-text">
+                        <h4> {{user.username}} </h4>
+                        <small>Degignation</small>
+                    </div>
+
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+
+                   <a href="{% url 'dashboard' %}"> 
+                    <li>
+                        <div class="run" id="run1">
+                            <span class="las la-adjust"></span>
+                            <span>Dashboard</span>
+                        </div></li></a>
+                    <a href="{%url 'view-my-attendance-employee-login' %}">  
+                      <li>
+                        <div class="run" id="run2">
+                            <span class="las la-eye"></span>
+                            <span>View Attendence Report</span>
+                        </div>
+                    </li></a>
+                 <a href="{% url 'logout' %}">   
+                  <li>
+                        <div class="run" id="run3">
+                            <span class="las la-signal"></span>
+                            <span>Log Out</span>
+                        </div>
+                    </li></a>
+
+
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    <!--               MAIN CONTENT 0 FOR FIRST PAGE           -->
+    <div class="main-content0" id="main-content0">
+        <header>
+            <div class="header-title-wrapper">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                <div class="header-title">
+                    <h1>{{user.username}}'s Dashboard</h1>
+                    <p>Overall report of user <span class="las la-chart-line">
+                        </span></p>
+                </div>
+            </div>
+            <div class="header-action">
+                <button class="btn btn-main">
+
+                    Show and Go
+                </button>
+            </div>
+        </header>
+
+
+        <!-- _______________________________________________________________________ END OF HEADER ______________________________________________ -->
+        <main>
+            <section>
+                <h3 class="section-head">Overview</h3>
+                <div class="analytics">
+                    <div class="analytic">
+                        <div class="analytic-icon">
+                            <span class="las la-user-tie"></span>
+                        </div>
+                        <div class="analytic-info">
+                            <h4>Total Days</h4S>
+                                <h1>500</h1>
+                        </div>
+                    </div>
+                    <div class="analytic">
+                        <div class="analytic-icon">
+                            <span class="las la-clone"></span>
+                        </div>
+                        <div class="analytic-info">
+                            <h4>Present Days</h4S>
+                                <h1>375 <small class="text-danger">65%</small></h1>
+                        </div>
+                    </div>
+                    <div class="analytic">
+                        <div class="analytic-icon">
+                            <span class="las la-user"></span>
+                        </div>
+                        <div class="analytic-info">
+                            <h4>Absent Days </h4S>
+                                <h1>125 <small class="text-absent">25%</small></h1>
+                        </div>
+                    </div>
+                    <div class="analytic">
+                        <div class="analytic-icon">
+                            <span class="las la-user-clock"></span>
+                        </div>
+                        <div class="analytic-info">
+                            <h4>Vacation</h4S>
+                                <h1>21 Days</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+        </main>
+    </div>
+    </body>
+{% if messages %}
+      {% for message in messages%}
+      <div class="alert alert-{{message.tags}}" > {{message}}
+      </div>
+      {%endfor %}
+
+    {%endif%}
+
+    </html>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --color-main: #396aff;
+            --bg: #fbfefd;
+            --bg2: #dce5ff;
+            --main-accent: #e9eefd;
+            --main-text: #4b5876;
+            --shadow: rgba(17, 17, 26, 0.1) 2px 2px 16px;
+            --hover: rgba(174, 164, 164, 0.319);
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            list-style-type: none;
+            box-sizing: border-box;
+        
+        }
+        
+        body {
+            background: var(--bg);
+            overflow: hidden;
+        
+        }
+        
+        #menu-toggle {
+            display: none;
+        }
+        
+        #menu-toggle:checked~.sidebar {
+            left: -345px;
+        }
+        
+        #menu-toggle:checked~.main-content {
+            margin-left: 0;
+            width: 100vw;
+        }
+        
+        #menu-toggle:checked~.main-content0 {
+            margin-left: 0;
+            width: 100vw;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 40px;
+        
+        
+        }
+        
+        .sidebar {
+            width: 345px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            padding: 1rem 1.2rem;
+            transition: left 300ms;
+        
+        }
+        
+        .sidebar-container {
+            height: 100%;
+            width: 100%;
+            background: var(--bg);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            overflow-y: auto;
+            padding: 1.2rem;
+        }
+        
+        .sidebar-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .sidebar-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        .sidebar-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        
+        .sidebar-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        .brand h2 {
+            color: #444;
+        }
+        
+        .brand h2 span {
+            color: var(--color-main);
+            font-size: 2.5rem;
+            display: inline-block;
+            margin-right: .5rem;
+        }
+        
+        .sidebar-avartar {
+            display: grid;
+            grid-template-columns: 70px auto;
+            align-items: center;
+            border: 2px solid var(--main-accent);
+            padding: .1rem .7rem;
+            border-radius: 7px;
+            margin: 2rem 0rem;
+        }
+        
+        .avartar-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .sidebar-menu li {
+            margin-bottom: .2rem;
+            cursor: pointer;
+        
+        }
+        
+        .sidebar-menu .run {
+            color: var(--main-text);
+            display: block;
+            padding: .7rem 0rem;
+        }
+        
+        .sidebar-menu .run:hover {
+            background-color: var(--hover);
+        }
+        
+        .sidebar-menu .run {
+            background-color: var(--main-accent);
+            padding: .7rem;
+            border-radius: 10px;
+        }
+        
+        .sidebar-menu .run span:first-child {
+            display: inline-block;
+            margin-right: .8rem;
+            font-size: 1.5rem;
+            columns: var(--color-main);
+        }
+        
+        .sidebar-card {
+            background: var(--main-accent);
+            box-shadow: var(--shadow);
+            text-align: center;
+            padding: 1rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+        
+        .side-card-icon span {
+            font-size: 8rem;
+            color: var(--color-main);
+            display: inline-block;
+        }
+        
+        .side-card-icon {
+            margin-bottom: .8rem;
+        }
+        
+        .side-card-icon+div {
+            margin-bottom: 1.2rem;
+        }
+        
+        .side-card-icon+div p {
+            font-size: 1.2rem;
+            columns: #555;
+        }
+        
+        .btn {
+            padding: .7rem 1rem;
+            border: none;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .btn span {
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-right: .7rem;
+        }
+        
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+        
+        .btn-main {
+            background: var(--color-main);
+            color: #fff;
+        }
+        
+        /*              main containt                      */
+        
+        .main-content {
+            margin-left: 345px;
+            width: calc(100vw - 345px);
+            padding: 1rem 1.2rem;
+            padding-right: 2rem;
+            transition: margin-left 300ms;
+            display: none;
+        
+        }
+        
+        .main-content0 {
+            margin-left: 345px;
+            width: calc(100vw - 345px);
+            padding: 1rem 1.2rem;
+            padding-right: 2rem;
+            transition: margin-left 300ms;
+        
+        
+        }
+        
+        .visible0 {
+            display: none;
+        }
+        
+        .visible1 {
+            display: block;
+        
+        }
+        
+        .visible2 {
+            display: block;
+        
+        }
+        
+        .visible3 {
+            display: block;
+        
+        }
+        
+        .visible4 {
+            display: block;
+        
+        }
+        
+        .visible5 {
+            display: block;
+        
+        }
+        
+        .visible6 {
+            display: block;
+        
+        }
+        
+        .active {
+            background-color: var(--hover);
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding-top: .5rem;
+        
+        
+        }
+        
+        .header-title-wrapper {
+            display: flex;
+        }
+        
+        .header-title-wrapper label {
+            display: inline-block;
+            color: var(--color-main);
+            margin-right: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .header-title h1 {
+            color: var(--main-text);
+            font-weight: 600;
+        }
+        
+        .header-title p {
+            color: #666;
+            font-size: .9rem;
+        }
+        
+        .header-title p span {
+            color: red;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-left: .5rem;
+        }
+        
+        .header-action button {
+            padding: .85rem 2rem;
+            font-size: 1rem;
+        }
+        
+        main {
+            padding: 2.5rem;
+            padding-bottom: 2.5rem;
+        }
+        
+        .analytics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2.5rem;
+            margin-bottom: 3rem;
+        
+        }
+        
+        .analytic {
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            border-radius: 10px;
+            display: flex;
+            padding-left: 2rem;
+        
+        }
+        
+        .analytic-info h4 {
+            font-weight: 400;
+            color: #555;
+            font-size: .98rem;
+        
+        }
+        
+        .analytic-info h1 {
+            color: var(--main-text);
+            font-weight: 600;
+        }
+        
+        .analytic-info h1 small {
+            font-weight: 700;
+            font-size: .8rem;
+        
+        }
+        
+        .text-danger {
+            color: #2ec3a3;
+        
+        }
+        
+        .text-absent {
+            color: red;
+        }
+        
+        .text-main {
+            color: var(--color-main);
+        }
+        
+        .analytic:first-child .analytic-icon {
+            background: #dce5ff;
+            color: #6883db;
+        }
+        
+        .analytic-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            margin-right: .8rem;
+        }
+        
+        .analytic:first-child .analytic-icon {
+            background: #dce5ff;
+            color: #6883db;
+        }
+        
+        .analytic:nth-child(2) .analytic-icon {
+            background: #ebf7f5;
+            color: #2ec3a3;
+        }
+        
+        .analytic:nth-child(3) .analytic-icon {
+            background: #ebf7f5;
+            color: red;
+        }
+        
+        .analytic:nth-child(4) .analytic-icon {
+            background: var(--main-accent);
+            color: var(--color-main);
+        }
+        
+        .section-head {
+            font-size: 1.4rem;
+            color: var(--main-text);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .block-grid {
+            display: grid;
+            grid-template-columns: 30% auto;
+            grid-gap: 3rem;
+        }
+        
+        .rev-content {
+            background: #fff;
+            box-shadow: var(--shadow);
+            border-radius: 15px;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        
+        .rev-content img {
+            width: 180px;
+            margin: 1.5rem 0rem;
+            border-radius: 100px;
+        }
+        
+        .rev-info {
+            margin-bottom: 1rem;
+        }
+        
+        .rev-info h3,
+        .rev-info h1 {
+            font-weight: 600;
+            color: var(--main-text);
+        }
+        
+        .rev-info h1 {
+            font-weight: 600;
+            margin-top: .2rem;
+        }
+        
+        .rev-info h1 {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #555;
+        }
+        
+        .rev-sum {
+            background: var(--main-accent);
+            border: 1px solid var(--color-main);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        
+        .rev-sum h4 {
+            color: #555;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        
+        }
+        
+        .rev-sum h2 {
+            font-weight: 600;
+            color: var(--main-text);
+        }
+        
+        .overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            display: none;
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        .overlay label {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+        
+        @media only screen and (min-width: 1224px) {
+            body {
+                background: var(--bg);
+                overflow: visible;
+        
+            }
+        }
+        
+        @media only screen and (max-width: 1224px) {
+            body {
+                background: var(--bg);
+                overflow: visible;
+        
+            }
+        
+            .sidebar {
+                left: -345px;
+                z-index: 30;
+            }
+        
+            .main-content {
+                width: 100vw;
+                margin-left: 0;
+            }
+        
+            .main-content0 {
+                width: 100vw;
+                margin-left: 0;
+            }
+        
+            #menu-toggle:checked~.sidebar {
+                left: 0;
+            }
+        
+            #menu-toggle:checked~.sidebar {
+                left: 0;
+            }
+        
+            #menu-toggle:checked~.overlay {
+                display: block;
+                text-align: right;
+            }
+        }
+        
+        @media only screen and (max-width: 860px) {
+            body {
+                background: var(--bg);
+                overflow: visible;
+        
+            }
+        
+            .analytics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        
+            .block-grid {
+                grid-template-columns: 100%;
+            }
+        
+            .revenue-card {
+                order: 2;
+            }
+        }
+        
+        @media only screen and (max-width: 580px) {
+            body {
+                background: var(--bg);
+                overflow: visible;
+        
+            }
+        
+            .analytics {
+                grid-template-columns: 100%;
+            }
+        }
+        
+        @media only screen and (max-width: 500px) {
+        
+            header,
+            .header-title-wrapper {
+                align-items: center;
+            }
+        
+            .header-title h1 {
+                font-size: 1.2rem;
+            }
+        
+            .header-title p {
+                display: none;
+            }
+        }
+    </style>

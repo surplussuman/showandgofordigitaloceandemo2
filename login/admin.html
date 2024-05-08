@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard </title>
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu-toggle">
+    <div class="overlay">
+        <label for="menu-toggle">
+        </label>
+    </div>
+
+    <div class="sidebar">
+        <div class="sidebar-container">
+            <div class="brand">
+                <h2>
+                    <a href="https://sirusxai.com/" target="_blank"> <span class="lab la-staylinked"></span>
+                        SirusX AI</a>
+                </h2>
+            </div>
+            <div class="sidebar-avartar">
+                <div>
+                    <img src="img/avtar.svg" alt="avatar">
+                </div>
+                <div class="avartar-info">
+                    <div class="avartar-text">
+                        <h4>Admin </h4>
+                        <small>Degignation</small>
+                    </div>
+
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+
+                    <li onclick="display1()">
+                        <div class="run" id="run1">
+                            <span class="las la-adjust"></span>
+                            <span>Dashboard</span>
+                        </div>
+                    <li onclick="display2()">
+                        <div class="run" id="run2">
+                            <span class="las la-user-plus"></span>
+                            <span>Register new user</span>
+                        </div>
+                    </li>
+                    <li onclick="display3()">
+                        <div class="run" id="run3">
+                            <span class="las la-camera-retro"></span>
+                            <span>capture face</span>
+                        </div>
+                    </li>
+                    <li onclick="display4()" id="run4">
+                        <div class="run">
+                            <span class="las la-brain"></span>
+                            <span>Train</span>
+                        </div>
+                    </li>
+                    <li onclick="display5()">
+                        <div class="run" id="run5">
+                            <span class="las la-id-badge"></span>
+                            <span>view attandence report</span>
+                        </div>
+                    </li>
+                    <li onclick="display6()">
+                        <div class="run" id="run6">
+                            <span class="las la-sign-out-alt"></span>
+                            <span> Log out </span>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="sidebar-card">
+                <div class="side-card-icon">
+                    <span class="lab la-codiepie"></span>
+                </div>
+                <div>
+                    <h4>Make Adsense</h4>
+                    <p>Add ads to your videos to earn money</p>
+                </div>
+                <button class="btn btn-main btn-block"> Start Camera-in </button><br>
+                <button class="btn btn-main btn-block"> Start Camera-out</button>
+            </div>
+        </div>
+
+    </div>
+    <!--               MAIN CONTENT 0 FOR FIRST PAGE           -->
+
+    <div class="main-content0" id="main-content0">
+        <header>
+            <div class="header-title-wrapper">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                <div class="header-title">
+                    <h1>Admin Dashboard</h1>
+                    <p>Overall report of institution <span class="las la-chart-line">
+                        </span></p>
+                </div>
+            </div>
+            <div class="header-action">
+                <button class="btn btn-main">
+
+                    Show and Go
+                </button>
+            </div>
+        </header>
+
+
+        <!-- _______________________________________________________________________ END OF HEADER ______________________________________________ -->
+        <main>
+            <section>
+                <h3 class="section-head">Overview</h3>
+                <div class="analytics">
+                    <div class="analytic">
+                        <div class="analytic-icon">
+                            <span class="las la-user-tie"></span>
+                        </div>
+                        <div class="analytic-info">
+                            <h4>Total</h4S>
+                                <h1>500</h1>
+                        </div>
+                    </div>
+                    <div class="analytic">
+                        <div class="analytic-icon">
+                            <span class="las la-clone"></span>
+                        </div>
+                        <div class="analytic-info">
+                            <h4>Present</h4S>
+                                <h1>375 <small class="text-danger">65%</small></h1>
+                        </div>
+                    </div>
+                    <div class="analytic">
+                        <div class="analytic-icon">
+                            <span class="las la-user"></span>
+                        </div>
+                        <div class="analytic-info">
+                            <h4>Absent </h4S>
+                                <h1>125 <small class="text-absent">25%</small></h1>
+                        </div>
+                    </div>
+                    <div class="analytic">
+                        <div class="analytic-icon">
+                            <span class="las la-user-clock"></span>
+                        </div>
+                        <div class="analytic-info">
+                            <h4>Total</h4S>
+                                <h1>21 Days</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+
+                <div class="block-grid">
+                    <div class="revenue-card">
+                        <h3 class="section-head">Total revenue</h3>
+                        <div class="rev-content">
+                            <img src="myprofile.jpg" alt="" />
+                            <div class="rev-info">
+                                <h3>SHIVAM ACHARYA </h3>
+                                <h1>3.5M <small>Subscribers</small></h1>
+                            </div>
+                            <div class="rev-sum">
+                                <h4>Total income</h4>
+                                <h2>$70,544</h2>
+                            </div>
+                        </div>
+                    </div>
+
+        </main>
+    </div>
+    <!--                MAIN CONTENT 1              -->
+    <div class="main-content" id="main-content1">
+        <header>
+            <div class="header-title-wrapper">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                <div class="header-title">
+                    <h1>Admin Dashboard</h1>
+                    <p>Overall report of institution <span class="las la-chart-line">
+                        </span></p>
+                </div>
+            </div>
+            <div class="header-action">
+                <button class="btn btn-main">
+
+                    Show and Go
+                </button>
+            </div>
+        </header>
+
+
+        <!-- _______________________________________________________________________ END OF HEADER ______________________________________________ -->
+        <main>
+            <section>
+                <h3 class="section-head">Overview</h3>
+                <div class="analytics">
+                    <div class="analytic">
+                        <div class="analytic-icon">
+                            <span class="las la-user-tie"></span>
+                        </div>
+                        <div class="analytic-info">
+                            <h4>Total</h4S>
+                                <h1>500</h1>
+                        </div>
+                    </div>
+                    <div class="analytic">
+                        <div class="analytic-icon">
+                            <span class="las la-clone"></span>
+                        </div>
+                        <div class="analytic-info">
+                            <h4>Present</h4S>
+                                <h1>375 <small class="text-danger">65%</small></h1>
+                        </div>
+                    </div>
+                    <div class="analytic">
+                        <div class="analytic-icon">
+                            <span class="las la-user"></span>
+                        </div>
+                        <div class="analytic-info">
+                            <h4>Absent </h4S>
+                                <h1>125 <small class="text-absent">25%</small></h1>
+                        </div>
+                    </div>
+                    <div class="analytic">
+                        <div class="analytic-icon">
+                            <span class="las la-user-clock"></span>
+                        </div>
+                        <div class="analytic-info">
+                            <h4>Total</h4S>
+                                <h1>21 Days</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+
+                <div class="block-grid">
+                    <div class="revenue-card">
+                        <h3 class="section-head">Total revenue</h3>
+                        <div class="rev-content">
+                            <img src="myprofile.jpg" alt="" />
+                            <div class="rev-info">
+                                <h3>SHIVAM ACHARYA </h3>
+                                <h1>3.5M <small>Subscribers</small></h1>
+                            </div>
+                            <div class="rev-sum">
+                                <h4>Total income</h4>
+                                <h2>$70,544</h2>
+                            </div>
+                        </div>
+                    </div>
+                    </div></section>
+
+        </main>
+    </div>
+    <div class="main-content" id="main-content2">
+        <div class="container">
+            <form action="">
+                <div class="form-group">
+                    <h1>REGISTER</h1>
+                    <div class="input">
+                        <i class="fa-solid fa-user"></i>
+                        <label for="username">Username:</label>
+                    </div>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <div class="input">
+                        <i class="fa-solid fa-lock"></i> <label for="password">Password:</label>
+                    </div>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <div class="input"><i class="fa-solid fa-check"></i><label for="confirm_password">Confirm Password:</label></div>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+                <div class="note">
+                    <p>NOTE:- password should be at least 6 character contaioning alphanumeric only</p>
+                </div>
+                <button type="submit" value="Register">Submit</button>
+            </form>
+        </div>
+    </div>
+<!-- --------main- content 3------------ -->
+    <div class="main-content" id="main-content3">
+        <div class="container">
+            <form action="">
+                <div class="form-group">
+                    <h1>Capture Face</h1>
+                    <div class="input">
+                        <i class="fa-solid fa-user"></i>
+                        <label for="username">Username:</label>
+                    </div>
+                    <input type="text" id="username" name="username" required>
+                </div>
+              
+                <div class="note">
+                    <p>NOTE:-Capture Face of the new user</p>
+                </div>
+                <button type="submit" value="Register">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="main-content" id="main-content4">
+        <h1>TRAIN</h1>
+    </div>
+
+    <div class="main-content" id="main-content5">
+        <h1>VIEW ATTENDENCE REPORT</h1>
+    </div>
+
+    <div class="main-content" id="main-content6">
+     
+    </div>
+
+</body>
+
+
+</html>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    :root {
+        --color-main: #396aff;
+        --bg: #fbfefd;
+        --bg2: #dce5ff;
+        --main-accent: #e9eefd;
+        --main-text: #4b5876;
+        --shadow: rgba(17, 17, 26, 0.1) 2px 2px 16px;
+        --hover: rgba(174, 164, 164, 0.319);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        list-style-type: none;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        background: var(--bg);
+        overflow: hidden;
+
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #menu-toggle:checked~.sidebar {
+        left: -345px;
+    }
+
+    #menu-toggle:checked~.main-content {
+        margin-left: 0;
+        width: 100vw;
+    }
+
+    #menu-toggle:checked~.main-content0 {
+        margin-left: 0;
+        width: 100vw;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 40px;
+
+
+    }
+
+    .sidebar {
+        width: 345px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding: 1rem 1.2rem;
+        transition: left 300ms;
+
+    }
+
+    .sidebar-container {
+        height: 100%;
+        width: 100%;
+        background: var(--bg);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        overflow-y: auto;
+        padding: 1.2rem;
+    }
+
+    .sidebar-container::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .sidebar-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .sidebar-container::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+    }
+
+    .sidebar-container::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .brand h2 {
+        color: #444;
+    }
+
+    .brand h2 span {
+        color: var(--color-main);
+        font-size: 2.5rem;
+        display: inline-block;
+        margin-right: .5rem;
+    }
+
+    .sidebar-avartar {
+        display: grid;
+        grid-template-columns: 70px auto;
+        align-items: center;
+        border: 2px solid var(--main-accent);
+        padding: .1rem .7rem;
+        border-radius: 7px;
+        margin: 2rem 0rem;
+    }
+
+    .avartar-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sidebar-menu li {
+        margin-bottom: .2rem;
+        cursor: pointer;
+
+    }
+
+    .sidebar-menu .run {
+        color: var(--main-text);
+        display: block;
+        padding: .7rem 0rem;
+    }
+
+    .sidebar-menu .run:hover {
+        background-color: var(--hover);
+    }
+
+    .sidebar-menu .run {
+        background-color: var(--main-accent);
+        padding: .7rem;
+        border-radius: 10px;
+    }
+
+    .sidebar-menu .run span:first-child {
+        display: inline-block;
+        margin-right: .8rem;
+        font-size: 1.5rem;
+        columns: var(--color-main);
+    }
+
+    .sidebar-card {
+        background: var(--main-accent);
+        box-shadow: var(--shadow);
+        text-align: center;
+        padding: 1rem;
+        border-radius: 15px;
+        margin-top: 2rem;
+    }
+
+    .side-card-icon span {
+        font-size: 8rem;
+        color: var(--color-main);
+        display: inline-block;
+    }
+
+    .side-card-icon {
+        margin-bottom: .8rem;
+    }
+
+    .side-card-icon+div {
+        margin-bottom: 1.2rem;
+    }
+
+    .side-card-icon+div p {
+        font-size: 1.2rem;
+        columns: #555;
+    }
+
+    .btn {
+        padding: .7rem 1rem;
+        border: none;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .btn span {
+        font-size: 1.2rem;
+        display: inline-block;
+        margin-right: .7rem;
+    }
+
+    .btn-block {
+        display: block;
+        width: 100%;
+    }
+
+    .btn-main {
+        background: var(--color-main);
+        color: #fff;
+    }
+
+    /*              main containt                      */
+
+    .main-content {
+        margin-left: 345px;
+        width: calc(100vw - 345px);
+        padding: 1rem 1.2rem;
+        padding-right: 2rem;
+        transition: margin-left 300ms;
+        display: none;
+
+    }
+
+    .main-content0 {
+        margin-left: 345px;
+        width: calc(100vw - 345px);
+        padding: 1rem 1.2rem;
+        padding-right: 2rem;
+        transition: margin-left 300ms;
+        
+
+
+    }
+
+    .visible0 {
+        display: none;
+    }
+
+    .visible1 {
+        display: block;
+
+    }
+
+    .visible2 {
+        display: block;
+
+    }
+
+    .visible3 {
+        display: block;
+
+    }
+
+    .visible4 {
+        display: block;
+
+    }
+
+    .visible5 {
+        display: block;
+
+    }
+
+    .visible6 {
+        display: block;
+
+    }
+
+    .active {
+        background-color: var(--hover);
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding-top: .5rem;
+
+
+    }
+
+    .header-title-wrapper {
+        display: flex;
+    }
+
+    .header-title-wrapper label {
+        display: inline-block;
+        color: var(--color-main);
+        margin-right: 1rem;
+        font-size: 1.8rem;
+    }
+
+    .header-title h1 {
+        color: var(--main-text);
+        font-weight: 600;
+    }
+
+    .header-title p {
+        color: #666;
+        font-size: .9rem;
+    }
+
+    .header-title p span {
+        color: red;
+        font-size: 1.2rem;
+        display: inline-block;
+        margin-left: .5rem;
+    }
+
+    .header-action button {
+        padding: .85rem 2rem;
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .analytics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2.5rem;
+        margin-bottom: 3rem;
+
+    }
+
+    .analytic {
+        padding: 1.5rem;
+        box-shadow: var(--shadow);
+        border-radius: 10px;
+        display: flex;
+        padding-left: 2rem;
+
+    }
+
+    .analytic-info h4 {
+        font-weight: 400;
+        color: #555;
+        font-size: .98rem;
+
+    }
+
+    .analytic-info h1 {
+        color: var(--main-text);
+        font-weight: 600;
+    }
+
+    .analytic-info h1 small {
+        font-weight: 700;
+        font-size: .8rem;
+
+    }
+
+    .text-danger {
+        color: #2ec3a3;
+
+    }
+
+    .text-absent {
+        color: red;
+    }
+
+    .text-main {
+        color: var(--color-main);
+    }
+
+    .analytic:first-child .analytic-icon {
+        background: #dce5ff;
+        color: #6883db;
+    }
+
+    .analytic-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        margin-right: .8rem;
+    }
+
+    .analytic:first-child .analytic-icon {
+        background: #dce5ff;
+        color: #6883db;
+    }
+
+    .analytic:nth-child(2) .analytic-icon {
+        background: #ebf7f5;
+        color: #2ec3a3;
+    }
+
+    .analytic:nth-child(3) .analytic-icon {
+        background: #ebf7f5;
+        color: red;
+    }
+
+    .analytic:nth-child(4) .analytic-icon {
+        background: var(--main-accent);
+        color: var(--color-main);
+    }
+
+    .section-head {
+        font-size: 1.4rem;
+        color: var(--main-text);
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .block-grid {
+        display: grid;
+        grid-template-columns: 30% auto;
+        grid-gap: 3rem;
+    }
+
+    .rev-content {
+        background: #fff;
+        box-shadow: var(--shadow);
+        border-radius: 15px;
+        padding: 1rem 2rem;
+        text-align: center;
+    }
+
+    .rev-content img {
+        width: 180px;
+        margin: 1.5rem 0rem;
+        border-radius: 100px;
+    }
+
+    .rev-info {
+        margin-bottom: 1rem;
+    }
+
+    .rev-info h3,
+    .rev-info h1 {
+        font-weight: 600;
+        color: var(--main-text);
+    }
+
+    .rev-info h1 {
+        font-weight: 600;
+        margin-top: .2rem;
+    }
+
+    .rev-info h1 {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .rev-sum {
+        background: var(--main-accent);
+        border: 1px solid var(--color-main);
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .rev-sum h4 {
+        color: #555;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+
+    }
+
+    .rev-sum h2 {
+        font-weight: 600;
+        color: var(--main-text);
+    }
+
+    .overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        display: none;
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    .overlay label {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 1224px) {
+        body {
+            background: var(--bg);
+            overflow: visible;
+
+        }
+    }
+
+    @media only screen and (max-width: 1224px) {
+        body {
+            background: var(--bg);
+            overflow: visible;
+
+        }
+
+        .sidebar {
+            left: -345px;
+            z-index: 30;
+        }
+
+        .main-content {
+            width: 100vw;
+            margin-left: 0;
+        }
+
+        .main-content0 {
+            width: 100vw;
+            margin-left: 0;
+        }
+
+        #menu-toggle:checked~.sidebar {
+            left: 0;
+        }
+
+        #menu-toggle:checked~.sidebar {
+            left: 0;
+        }
+
+        #menu-toggle:checked~.overlay {
+            display: block;
+            text-align: right;
+        }
+    }
+
+    @media only screen and (max-width: 860px) {
+        body {
+            background: var(--bg);
+            overflow: visible;
+
+        }
+
+        .analytics {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .block-grid {
+            grid-template-columns: 100%;
+        }
+
+        .revenue-card {
+            order: 2;
+        }
+    }
+
+    @media only screen and (max-width: 580px) {
+        body {
+            background: var(--bg);
+            overflow: visible;
+
+        }
+
+        .analytics {
+            grid-template-columns: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+
+        header,
+        .header-title-wrapper {
+            align-items: center;
+        }
+
+        .header-title h1 {
+            font-size: 1.2rem;
+        }
+
+        .header-title p {
+            display: none;
+        }
+    }
+
+    /* }----------------css for new registration-------------------- */
+    .container {
+        animation: container 2s ease 0s 1 normal forwards;
+    }
+
+
+
+    @keyframes container {
+        0% {
+            animation-timing-function: ease-in;
+            opacity: 1;
+            transform: translateY(-45px);
+        }
+
+        24% {
+            opacity: 1;
+        }
+
+        40% {
+            animation-timing-function: ease-in;
+            transform: translateY(-24px);
+        }
+
+        65% {
+            animation-timing-function: ease-in;
+            transform: translateY(-12px);
+        }
+
+        82% {
+            animation-timing-function: ease-in;
+            transform: translateY(-6px);
+        }
+
+        93% {
+            animation-timing-function: ease-in;
+            transform: translateY(-4px);
+        }
+
+        25%,
+        55%,
+        75%,
+        87% {
+            animation-timing-function: ease-out;
+            transform: translateY(0px);
+        }
+
+        100% {
+            animation-timing-function: ease-out;
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+
+
+    .login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        margin: 3rem auto;
+        width: 80%;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 20px 10px 20px 10px#396bff9f;
+
+    }
+
+
+    .form-group h1 {
+        text-align: center;
+        color: #396bffbb;
+        margin-bottom: 1rem;
+    }
+
+    label,
+    input,
+    button {
+        display: block;
+    }
+
+    .error-message {
+        color: red;
+        font-size: 14px;
+    }
+
+
+    .iclass {
+        text-align: center;
+        color: #396bffbb;
+    }
+
+    .iclass i {
+        border: 2px solid #396bffbb;
+        padding: 1.5rem;
+        font-size: 4rem;
+        border-radius: 50%;
+
+    }
+
+    .input {
+        display: flex;
+
+    }
+
+    .input i {
+        opacity: 0.5;
+        font-size: 1rem;
+    }
+
+    .input label {
+        margin-left: 1rem;
+    }
+
+
+    input {
+        margin-bottom: 1rem;
+        border: none;
+        outline: none;
+        background: none;
+        padding: 0.5rem 0.7rem;
+        font-size: 1rem;
+        color: #555;
+        border-bottom: 2px solid rgba(90, 88, 88, 0.612);
+    }
+
+
+    /* .container button {
+    background-color: var(--color-main);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}  */
+    .container button {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        border-radius: 25px;
+        outline: none;
+        border: none;
+        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+
+        background-size: 200%;
+        font-size: 1.2rem;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 1rem 0;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .container button:hover {
+        background-position: right;
+    }
+
+    .container:hover {
+        transform: scale(1.5);
+        transition: 0.5s;
+        box-shadow: 0 15px 25px #396bff9f;
+    }
+
+    .note {
+        color: rgba(255, 0, 0, 0.8);
+    }
+
+    @media only screen and (max-width: 1000px) {
+       .container{
+        width: 100%;
+       }
+    }
+</style>
+<script>// ------------SCRIPT FOR NAVIGATION-----------------------
+
+    function display1() {
+        let main0 = document.getElementById("main-content0");
+        main0.classList.add("visible0");
+        let main1 = document.getElementById("main-content1");
+        main1.classList.add("visible1");
+        let main2 = document.getElementById("main-content2");
+        main2.classList.remove("visible2");
+        let main3 = document.getElementById("main-content3");
+        main3.classList.remove("visible3");
+        let main4 = document.getElementById("main-content4");
+        main4.classList.remove("visible4");
+        let main5 = document.getElementById("main-content5");
+        main5.classList.remove("visible5");
+        let main6 = document.getElementById("main-content6");
+        main6.classList.remove("visible6");
+    }
+
+
+    function display2() {
+        let main0 = document.getElementById("main-content0");
+        main0.classList.add("visible0");
+        let main1 = document.getElementById("main-content1");
+        main1.classList.remove("visible1");
+        let main2 = document.getElementById("main-content2");
+        main2.classList.add("visible2");
+        let main3 = document.getElementById("main-content3");
+        main3.classList.remove("visible3");
+        let main4 = document.getElementById("main-content4");
+        main4.classList.remove("visible4");
+        let main5 = document.getElementById("main-content5");
+        main5.classList.remove("visible5");
+        let main6 = document.getElementById("main-content6");
+        main6.classList.remove("visible6");
+    }
+    function display3() {
+        let main0 = document.getElementById("main-content0");
+        main0.classList.add("visible0");
+        let main1 = document.getElementById("main-content1");
+        main1.classList.remove("visible1");
+        let main2 = document.getElementById("main-content2");
+        main2.classList.remove("visible2");
+        let main3 = document.getElementById("main-content3");
+        main3.classList.add("visible3");
+        let main4 = document.getElementById("main-content4");
+        main4.classList.remove("visible4");
+        let main5 = document.getElementById("main-content5");
+        main5.classList.remove("visible5");
+        let main6 = document.getElementById("main-content6");
+        main6.classList.remove("visible6");
+    }
+    function display4() {
+        let main0 = document.getElementById("main-content0");
+        main0.classList.add("visible0");
+        let main1 = document.getElementById("main-content1");
+        main1.classList.remove("visible1");
+        let main2 = document.getElementById("main-content2");
+        main2.classList.remove("visible2");
+        let main3 = document.getElementById("main-content3");
+        main3.classList.remove("visible3");
+        let main4 = document.getElementById("main-content4");
+        main4.classList.add("visible4");
+        let main5 = document.getElementById("main-content5");
+        main5.classList.remove("visible5");
+        let main6 = document.getElementById("main-content6");
+        main6.classList.remove("visible6");
+    }
+    function display5() {
+        let main0 = document.getElementById("main-content0");
+        main0.classList.add("visible0");
+        let main1 = document.getElementById("main-content1");
+        main1.classList.remove("visible1");
+        let main2 = document.getElementById("main-content2");
+        main2.classList.remove("visible2");
+        let main3 = document.getElementById("main-content3");
+        main3.classList.remove("visible3");
+        let main4 = document.getElementById("main-content4");
+        main4.classList.remove("visible4");
+        let main5 = document.getElementById("main-content5");
+        main5.classList.add("visible5");
+        let main6 = document.getElementById("main-content6");
+        main6.classList.remove("visible6");
+    }
+    function display6() {
+        let main0 = document.getElementById("main-content0");
+        main0.classList.add("visible0");
+        let main1 = document.getElementById("main-content1");
+        main1.classList.remove("visible1");
+        let main2 = document.getElementById("main-content2");
+        main2.classList.remove("visible2");
+        let main3 = document.getElementById("main-content3");
+        main3.classList.remove("visible3");
+        let main4 = document.getElementById("main-content4");
+        main4.classList.remove("visible4");
+        let main5 = document.getElementById("main-content5");
+        main5.classList.remove("visible5");
+        let main6 = document.getElementById("main-content6");
+        main6.classList.add("visible6");
+    }
+
+</script>
