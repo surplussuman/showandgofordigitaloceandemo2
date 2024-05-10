@@ -1027,7 +1027,7 @@ def mark_your_attendance(request):
                         present[person_name] = True
                         log_time[person_name] = datetime.datetime.now()
 
-                    cv2.putText(frame, f"{person_name} {float(prob):.2f}", (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
+                    cv2.putText(zoomed_face, f"{person_name} {float(prob):.2f}", (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
 
 
                 else:
