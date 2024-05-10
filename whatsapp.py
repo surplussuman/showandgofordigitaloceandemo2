@@ -6,6 +6,7 @@ pywhatkit.sendwhatmsg('+919786829666', 'hello')
 import pywhatkit
 from datetime import datetime
 
+
 # Specify the phone number (with country code) and the message you want to send
 phone_number = "+919786829666"
 current_time = datetime.now().strftime("%H:%M")
