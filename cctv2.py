@@ -341,6 +341,7 @@ def detect_faces_and_display():
     cv2.namedWindow("Detected Face")
     cv2.moveWindow("Detected Face", 800, 0)
 
+
     small_window_width = 300
     small_window_height = 300
 
