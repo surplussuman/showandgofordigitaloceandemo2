@@ -1490,6 +1490,8 @@ def train(request):
 
     vizualize_Data(X1, targets)
 
+    print("Model saved")
+
     messages.success(request, f'Training Completed.')
 
 
