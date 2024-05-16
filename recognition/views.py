@@ -1492,8 +1492,8 @@ def train(request):
 
     messages.success(request, f'Training Completed.')
 
-    return render(request, "recognition/train.html")
 
+    return render(request, "recognition/train.html")
 
 @login_required
 def not_authorised(request):
