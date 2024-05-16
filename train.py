@@ -4,6 +4,8 @@ import cv2
 import face_recognition
 import numpy as  np
 from sklearn.preprocessing import LabelEncoder
+from sklearn.svm import SVC
+
 
 
 def train():
@@ -48,3 +50,8 @@ def train():
     np.save('face_recognition_data/classes.npy', encoder.classes_)
     svc = SVC(kernel='linear', probability=True)
     svc.fit(X1, y)
+
+    svc.save("trained_model.yml")
+
+
+train()
